@@ -1,0 +1,21 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: zuul-demo
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+zuul:
+  routes:
+    test-user-web:
+      path: /mytest-web/**
+      serviceId:  user_web
+    test-user-service:
+      path: /mytest-service/**
+      serviceId:  user-service

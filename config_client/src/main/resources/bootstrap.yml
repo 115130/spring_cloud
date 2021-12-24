@@ -1,0 +1,10 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: mytest
+  cloud:
+    config:
+      uri: http://localhost:9998/
+      profile:  dev
+      label: master

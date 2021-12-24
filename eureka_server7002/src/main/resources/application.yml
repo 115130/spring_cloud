@@ -1,0 +1,15 @@
+server:
+  port: 7002
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+  application:
+    name: eureka-server
+eureka:
+  instance:
+    hostname: eu7002.com
+  client:
+    service-url:
+      defaultZone: http://eu7001.com:7001/eureka/,http://eu7003.com:7003/eureka/
+    register-with-eureka: false
+    fetch-registry: false
